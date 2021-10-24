@@ -1,3 +1,5 @@
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
@@ -11,7 +13,7 @@ const NotFound = () => {
       <h1>404</h1>
       <p>Page Not Found</p>
       <Button variant='primary' onClick={() => history.goBack()}>
-        Go back
+        <FontAwesomeIcon icon={faArrowLeft} /> Go back
       </Button>
     </div>
   );

@@ -9,3 +9,11 @@
   margin: 0 auto;
   padding: 10px 0;
 }
+
+.service__card .fa-money-bill {
+  margin-right: 10px !important;
+}
+
+.service__card .fa-shopping-cart {
+  margin-left: 10px !important;
+}

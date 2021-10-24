@@ -4,15 +4,15 @@
 
 - This is a simple Web application.
 - In this application we can see **some services**. Which is basically load from **fakeData**.
-- By clicking the button we can see buy the service.
-- We can see our services by visiting About us route.
-- We also see our selected actors.
+- We can see our all services by visiting services route.
+- There is also about us & contact us route.
+- By visiting FAQ route we can can see some ques answer.
 
 ---
 
 ### `Demo`
 
-<!-- <img src="./src/images/demo.gif" alt="Demo" border="0"> -->
+<img src="./src/demo.gif" alt="Demo" border="0">
 
 ---
 
