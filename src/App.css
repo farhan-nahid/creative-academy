@@ -5,3 +5,7 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.active {
+  font-weight: 700;
+}

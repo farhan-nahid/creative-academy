@@ -4,7 +4,10 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 const Contact = () => {
   return (
     <Container className='my-5 p-5 border rounded shadow'>
-      <h3 className='text-center fw-bold'>How can we help you?</h3>
+      <h3 className='text-center fw-bold mb-3'>Get In Touch</h3>
+      <p className='text-center'>
+        Please fill the form. Our team will contact you.
+      </p>
       <Form className='mt-5'>
         <Row className='mb-3'>
           <Form.Group as={Col} controlId='formGridEmail'>

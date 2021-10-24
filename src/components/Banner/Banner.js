@@ -6,7 +6,7 @@ import './Banner.css';
 
 const Banner = () => {
   return (
-    <Carousel className='bg-light'>
+    <Carousel className='bg-light' pause="false">
       <Carousel.Item>
         <Container>
           <Row className='my-5 py-5 g-5'>

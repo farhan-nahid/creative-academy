@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <Navbar bg='light' expand='lg'>
-      <Container>
+      <Container className='text-center'>
         <Navbar.Brand as={NavLink} to='/' className='fw-bold'>
           Creative Academy
         </Navbar.Brand>
