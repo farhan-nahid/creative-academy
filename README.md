@@ -1,11 +1,11 @@
-## [Bollywood Superstars](https://bollywood-superstars.netlify.app/)
+## [Creative Academy](https://creative-academy.netlify.app/)
 
 ### `Some Description`
 
 - This is a simple Web application.
 - In this application we can see **some services**. Which is basically load from **fakeData**.
-- By clicking the button we can see the service details.
-- You can see out services by visiting About us route.
+- By clicking the button we can see buy the service.
+- We can see our services by visiting About us route.
 - We also see our selected actors.
 
 ---
@@ -18,7 +18,7 @@
 
 ### `Live Site`
 
-https://bollywood-superstars.netlify.app/
+https://creative-academy.netlify.app/
 
 ---
 
@@ -32,6 +32,7 @@ https://bollywood-superstars.netlify.app/
 - [x] Hooks (useState, useEffect, useHistory)
 - [x] FakeData
 - [x] Font Awesome Icons
+- [x] React Hot Toast
 
 ---
 

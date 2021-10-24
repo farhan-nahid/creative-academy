@@ -7,7 +7,7 @@ const HomeSingleService = ({ service: { id, img, title, description } }) => {
     <Col md={6} sm={12}>
       <Card className='service__card shadow rounded'>
         <Card.Img variant='top' src={img} />
-        <Card.Body>
+        <Card.Body className='text-center'>
           <Card.Title as='h5' className='fw-bold'>
             {title}
           </Card.Title>

@@ -1,6 +1,11 @@
+.service__card {
+  border-radius: 10px !important;
+}
+
 .service__card img {
   height: 175px;
   width: 173px;
   object-fit: contain;
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px 0;
 }

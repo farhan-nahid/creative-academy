@@ -7,7 +7,7 @@ const NavBar = () => {
     <Navbar bg='light' expand='lg'>
       <Container>
         <Navbar.Brand as={NavLink} to='/' className='fw-bold'>
-          Creative Agency
+          Creative Academy
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
@@ -13,6 +14,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <Router>
+      <Toaster />
       <NavBar />
       <Switch>
         <Route exact path='/' component={Home} />

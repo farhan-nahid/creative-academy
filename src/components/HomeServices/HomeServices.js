@@ -21,14 +21,14 @@ const HomeServices = () => {
     <Container className='my-5'>
       <h1 className='text-center fw-bold '>Our Best Services</h1>
       <Row className='g-4 mt-5'>
-        <Col md={6} sm={12} xs={12} className='d-flex align-items-center'>
+        <Col md={5} sm={12} xs={12} className='d-flex align-items-center'>
           <img
             className='img-fluid'
             src={serviceSection}
             alt='serviceSection'
           />
         </Col>
-        <Col md={6} sm={12} xs={12}>
+        <Col md={7} sm={12} xs={12}>
           {services.length ? (
             <Row className='g-4'>
               {
