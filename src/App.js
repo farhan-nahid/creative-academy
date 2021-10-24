@@ -1,29 +1,30 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
+import AllServices from './components/AllServices/AllServices';
+import Contact from './components/Contact/Contact';
+import FAQ from './components/FAQ/FAQ';
+import Footer from './components/Footer/Footer';
+import NavBar from './components/NavBar/NavBar';
+import NotFound from './components/NotFound/NotFound';
+import Home from './pages/Home';
 
 function App() {
-  const [data, setData] = useState([]);
-
-  /*  useEffect(() => {
-    fetch(fakeData)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []); */
-
-  useEffect(() => {
-    fetch('./homeServices.json')
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
   return (
-    <div className='App'>
-      {data.map((d) => (
-        <div>
-          <p>{d.title}</p>
-          <img src={d.img} alt='' />
-        </div>
-      ))}
-    </div>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/home' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/services' component={AllServices} />
+        <Route path='/faq' component={FAQ} />
+        <Route path='/contact' component={Contact} />
+        <Route path='*' component={NotFound} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

@@ -1,0 +1,6 @@
+.service__card img {
+  height: 175px;
+  width: 173px;
+  object-fit: contain;
+  margin: auto;
+}
