@@ -29,7 +29,7 @@ https://creative-academy.netlify.app/
 - [x] CSS3
 - [x] React Router Dom
 - [x] Axios
-- [x] Hooks (useState, useEffect, useHistory)
+- [x] Hooks (useState, useEffect)
 - [x] FakeData
 - [x] Font Awesome Icons
 - [x] React Hot Toast
