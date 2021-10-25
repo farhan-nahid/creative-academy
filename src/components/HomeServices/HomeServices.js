@@ -7,10 +7,11 @@ import HomeSingleService from '../HomeSingleService/HomeSingleService';
 
 const HomeServices = () => {
   const [services, setServices] = useState([]);
+  const fourServices = services.slice(0, 4);
 
   useEffect(() => {
     const url =
-      'https://raw.githubusercontent.com/farhan-nahid/router-task/main/src/homeServices.json';
+      'https://raw.githubusercontent.com/farhan-nahid/router-task/main/src/allServices.json';
     axios
       .get(url)
       .then((res) => setServices(res.data))
@@ -29,11 +30,11 @@ const HomeServices = () => {
           />
         </Col>
         <Col md={7} sm={12} xs={12}>
-          {services.length ? (
+          {fourServices.length ? (
             <Row className='g-4'>
               {
                 // map services data
-                services.map((service) => (
+                fourServices.map((service) => (
                   <HomeSingleService key={service.id} service={service} />
                 ))
               }
