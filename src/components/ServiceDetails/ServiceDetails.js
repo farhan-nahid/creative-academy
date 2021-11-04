@@ -1,13 +1,14 @@
-import { faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Button, Card, Container } from 'react-bootstrap';
+import { useHistory, useParams } from 'react-router-dom';
 import useServices from '../../hooks/useServices';
 
 const ServiceDetails = () => {
   const { id } = useParams();
   const [services] = useServices();
+  const history = useHistory();
   const selectedService = services.find((service) => service.id === Number(id));
 
   return (
@@ -22,6 +23,9 @@ const ServiceDetails = () => {
           <Card.Text as='h5'>
             <FontAwesomeIcon icon={faMoneyBill} /> {selectedService?.price} ৳
           </Card.Text>
+          <Button onClick={() => history.push('/home')}>
+            <FontAwesomeIcon icon={faArrowLeft} /> Back To Home
+          </Button>
         </Card.Body>
       </Card>
     </Container>
