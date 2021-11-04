@@ -1,21 +1,10 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row, Spinner } from 'react-bootstrap';
-import toast from 'react-hot-toast';
-import AllSingleService from '../AllSingleService/AllSingleService';
+import useServices from '../../hooks/useServices';
+import ServiceCard from '../ServiceCard/ServiceCard';
 
 const AllServices = () => {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    const url =
-      'https://raw.githubusercontent.com/farhan-nahid/router-task/main/src/allServices.json';
-
-    axios
-      .get(url)
-      .then((res) => setServices(res.data))
-      .catch((err) => toast.error('Something Went Wrong!!'));
-  }, []);
+  const [services] = useServices();
 
   return (
     <Container className='my-5'>
@@ -25,7 +14,7 @@ const AllServices = () => {
           {
             // map services data
             services.map((service) => (
-              <AllSingleService key={service.id} service={service} />
+              <ServiceCard key={service.id} service={service} lg='4' md='6' />
             ))
           }
         </Row>

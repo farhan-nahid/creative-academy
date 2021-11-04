@@ -2,11 +2,18 @@ import { faMoneyBill, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import './HomeSingleService.css';
+import { useHistory } from 'react-router-dom';
+import './ServiceCard.css';
 
-const HomeSingleService = ({ service: { img, title, description, price } }) => {
+const ServiceCard = ({
+  service: { img, title, description, price, id },
+  lg,
+  md,
+}) => {
+  const history = useHistory();
+
   return (
-    <Col lg={6} md={12} sm={12} xs={12}>
+    <Col lg={lg} md={md} sm={12} xs={12}>
       <Card className='service__card shadow rounded'>
         <Card.Img variant='top' src={img} />
         <Card.Body className='text-center'>
@@ -18,7 +25,10 @@ const HomeSingleService = ({ service: { img, title, description, price } }) => {
           <Card.Text as='h5'>
             <FontAwesomeIcon icon={faMoneyBill} /> {price} ৳
           </Card.Text>
-          <Button variant='primary'>
+          <Button
+            variant='primary'
+            onClick={() => history.push(`/details/${id}`)}
+          >
             Enroll Now <FontAwesomeIcon icon={faShoppingCart} />
           </Button>
         </Card.Body>
@@ -27,4 +37,4 @@ const HomeSingleService = ({ service: { img, title, description, price } }) => {
   );
 };
 
-export default HomeSingleService;
+export default ServiceCard;

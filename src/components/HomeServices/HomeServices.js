@@ -1,22 +1,12 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
-import toast from 'react-hot-toast';
+import useServices from '../../hooks/useServices';
 import serviceSection from '../../images/service-section.png';
-import HomeSingleService from '../HomeSingleService/HomeSingleService';
+import ServiceCard from '../ServiceCard/ServiceCard';
 
 const HomeServices = () => {
-  const [services, setServices] = useState([]);
+  const [services] = useServices();
   const fourServices = services.slice(0, 4);
-
-  useEffect(() => {
-    const url =
-      'https://raw.githubusercontent.com/farhan-nahid/router-task/main/src/allServices.json';
-    axios
-      .get(url)
-      .then((res) => setServices(res.data))
-      .catch((err) => toast.error('Something Went Wrong!!'));
-  }, []);
 
   return (
     <Container className='my-5'>
@@ -35,7 +25,12 @@ const HomeServices = () => {
               {
                 // map services data
                 fourServices.map((service) => (
-                  <HomeSingleService key={service.id} service={service} />
+                  <ServiceCard
+                    key={service.id}
+                    service={service}
+                    lg='6'
+                    md='12'
+                  />
                 ))
               }
             </Row>

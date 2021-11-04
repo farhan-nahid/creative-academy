@@ -9,6 +9,7 @@ import FAQ from './components/FAQ/FAQ';
 import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import NotFound from './components/NotFound/NotFound';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Home from './pages/Home';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/home' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/services' component={AllServices} />
+        <Route path='/details/:id' component={ServiceDetails} />
         <Route path='/faq' component={FAQ} />
         <Route path='/contact' component={Contact} />
         <Route path='*' component={NotFound} />
